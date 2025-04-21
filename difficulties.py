@@ -6,6 +6,6 @@ def get_difficulty():
         if choice == "normal":
             return 1.0  # Normal turtle speed
         elif choice == "hard":
-            return 0.5  # Fast turtle
+            return 0.5
         else:
             print("Invalid choice. Please enter, Normal, or Hard.")
