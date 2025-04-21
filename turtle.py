@@ -2,6 +2,8 @@ import pygame
 import random
 import time
 
+from test1 import move_interval
+
 pygame.init()
 
 # Screen setup
@@ -31,7 +33,7 @@ class TurtleObject:
         self.y = 0
         self.visible = True
         self.last_move_time = time.time()
-        self.move_interval = 1
+        self.move_interval = move_interval
         self.pop_duration = 0.2  # seconds
 
     def move(self):
@@ -123,6 +125,8 @@ while running:
     # Score position
     score_text = score_font.render(f"Score: {score}", True, (255, 255, 255))
     screen.blit(score_text, (screen_width - score_text.get_width() - 20, 20))
+
+
 
     # End game check
     if timer_done:
