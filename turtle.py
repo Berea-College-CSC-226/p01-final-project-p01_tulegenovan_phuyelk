@@ -1,6 +1,7 @@
 import pygame
 import random
 import time
+from difficulty import get_difficulty
 
 pygame.init()
 
@@ -71,6 +72,7 @@ while running:
             mouse_pos = pygame.mouse.get_pos()
             if game_turtle.is_clicked(mouse_pos):
                 score+=1
+                print("score: ", score)
                 game_turtle.move()
 
     game_turtle.update()
@@ -83,7 +85,7 @@ while running:
 
     pygame.display.flip()
 
-
+difficulty_speed = get_difficulty()
 
 # Quit pygame
 pygame.quit()
