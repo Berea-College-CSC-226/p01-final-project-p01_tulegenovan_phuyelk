@@ -8,7 +8,7 @@ pygame.init()
 screen_width = 650
 screen_height = 650
 screen = pygame.display.set_mode((screen_width, screen_height))
-pygame.display.set_caption("Catch the Turtle")
+pygame.display.set_caption("Turtle Evasion!")
 
 # Load background image
 background = pygame.image.load('image/background.png')
@@ -16,24 +16,22 @@ background = pygame.transform.scale(background, (screen_width, screen_height))
 
 # Load turtle image
 turtle_image = pygame.image.load('image/turtle.png').convert_alpha()
-turtle_image = pygame.transform.scale(turtle_image, (130, 130))
+turtle_image = pygame.transform.scale(turtle_image, (120, 120))
 turtle_image.set_colorkey((255, 255, 255), pygame.RLEACCEL)
 
 # Fonts
 timer_font = pygame.font.SysFont('Comic Sans MS', 60)
-score_font = pygame.font.SysFont('Arial', 30)
+score_font = pygame.font.SysFont('Comic Sans MS', 30)
 
 class TurtleObject:
     def __init__(self):
-        self.size = 130
+        self.size = 120
         self.image = turtle_image
         self.x = 0
         self.y = 0
         self.visible = True
-
         self.last_move_time = time.time()
         self.move_interval = 1
-
         self.pop_duration = 0.2  # seconds
 
     def move(self):
@@ -49,7 +47,8 @@ class TurtleObject:
                 scale = elapsed / self.pop_duration  # value from 0 → 1
                 scale = max(0.2, min(1.0, scale))
                 size = int(self.size * scale)
-                scaled_img = pygame.transform.smoothscale(self.image, (size, size)) # This makes the turtle appear like it’s growing from the center.
+                # This makes the turtle appear like it’s growing from the center.
+                scaled_img = pygame.transform.smoothscale(self.image, (size, size))
                 offset_x = (self.size - size) // 2 # This math shifts the turtle so it always grows from the middle.
                 offset_y = (self.size - size) // 2
                 screen.blit(scaled_img, (self.x + offset_x, self.y + offset_y))
@@ -91,12 +90,11 @@ while running:
         elif event.type == pygame.MOUSEBUTTONDOWN:
             if not game_started:
                 game_started = True
-                start_time = time.time()  # Start timer only after first click
+
             else:
                 mouse_pos = pygame.mouse.get_pos()
                 if game_turtle.is_clicked(mouse_pos):
                     score += 1
-                    print("score: ", score)
                     game_turtle.move()
 
     # Draw background
@@ -128,7 +126,7 @@ while running:
 
     # End game check
     if timer_done:
-        print("Time's up")
+        # print("Time's up")
         running = False
 
     pygame.display.flip()

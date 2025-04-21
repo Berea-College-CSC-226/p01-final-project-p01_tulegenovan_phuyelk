@@ -31,7 +31,7 @@ def test_game_suite():
     unittest(turtle.is_clicked((110, 110)) == True)  # inside bounds
 
     # 2. Test is_clicked() outside turtle bounds
-    unittest(turtle.is_clicked((231, 231)) == False)  # outside bounds
+    unittest(turtle.is_clicked((221, 221)) == False)  # outside bounds
 
     # 3. Test is_clicked() when invisible
     turtle.visible = False
