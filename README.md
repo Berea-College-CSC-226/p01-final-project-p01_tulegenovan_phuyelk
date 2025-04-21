@@ -22,7 +22,7 @@ HW02: Loopy Turtles and HW 03: Fully Functional Gitty Psychedelic Robotic Turtle
 things we need in order to complete this project. We have a lot of source assignments listed but we will use 
 certain things from each one because each assignment has new things about turtle. 
 
-❗️**CRC Card(s)**:
+**CRC Card(s)**:
   - Create a CRC card for each class that your project will implement.
   - See this link for a sample CRC card and a template to use for your own cards (you will have to make a copy to edit):
     [CRC Card Example](https://docs.google.com/document/d/1JE_3Qmytk_JGztRqkPXWACJwciPH61VCx3idIlBCVFY/edit?usp=sharing)
@@ -60,7 +60,7 @@ Reflect on what you’ve done so far. How’s it going? Are you feeling behind/a
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+   We dont feel far behind, we are doing well. We feel good about this project!
 ```
 
 ---
@@ -69,14 +69,16 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+**Completion Percentage**: `0 - 100%`
+ 80%
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
+️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
   strategies you can employ to increase the likelihood that you'll be successful in completing this project 
   before the deadline.
 
 ```
-    **Replace this text with your reflection
+    very confident, we are making good progress. We are approaching this project little by little and we are doing well.
+    I feel that our approach to targeting small problems one at a time is helping. 
 ```
 
 ---
