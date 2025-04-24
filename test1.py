@@ -98,7 +98,7 @@ class FakeObject(TurtleObject):
         super().move()
 
     def is_clicked(self, mouse):
-        super().is_clicked(mouse)
+        return super().is_clicked(mouse)
 
     def update(self):
         super().update()
@@ -146,7 +146,7 @@ while running:
                 if game_turtle.is_clicked(mouse_pos):
                     score += 1
                     game_turtle.move()
-                elif fake.is_clicked(mouse_pos):
+                elif fake and fake.is_clicked(mouse_pos):
                     score -= 1
                     fake.move()
 
