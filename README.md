@@ -51,7 +51,11 @@ and describe how you integrated the ideas or code into your program. This includ
 helped you, AI tools you've used, and any other resources that are not solely your own contribution. Update this 
 section as you go. DO NOT forget about it!
 
----
+```
+    we used ChatGPT when we got absolutely stuck, and needed some guidance. We used it to help us guide us in the right 
+    directions when we got stuck. We also used the PyCharm game dictionary along with the Tkinter, we also had to track back
+    to some of the HW and TW to get ideas on how to use randit, and things of that sort. 
+```
 
 ## Milestone 2: Code Setup and Issue Queue
 
@@ -61,7 +65,9 @@ Reflect on what you’ve done so far. How’s it going? Are you feeling behind/a
 What has surprised you so far? Describe your general feelings. Be honest with yourself; this section is for you, not me.
 
 ```
-    **Replace this text with your reflection
+    We are feeling good about our project, we made a lot of progress and I feel that we are ahead of others. 
+    Only thing that has us worried is how we will implement the different difficulty levels into the game. But overall,
+    we are doing well and cooperating well and also putting in equal amount of efforts and work. 
 ```
 
 ---
@@ -70,14 +76,15 @@ What has surprised you so far? Describe your general feelings. Be honest with yo
 
 Indicate what percentage of the project you have left to complete and how confident you feel. 
 
-❗️**Completion Percentage**: `0 - 100%`
+**Completion Percentage**: `85%`
 
-❗️**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
+**Confidence**: Describe how confident you feel about completing this project, and why. Then, describe some 
   strategies you can employ to increase the likelihood that you'll be successful in completing this project 
   before the deadline.
 
 ```
-    **Replace this text with your reflection
+    very confident, we are almost done, and we have been progressing greatly. Something we can keep doing to ensure
+    we get this done is keep working on it together, and make progress everytime we do. 
 ```
 
 ---
