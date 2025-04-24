@@ -1,9 +1,10 @@
-
-import pygame
-import random
-import time
+import pygame, random, time
+import tkinter as tk
+from tkinter import messagebox
 
 pygame.init()
+root = tk.Tk()
+root.withdraw()
 
 # Screen setup
 screen_width = 650
@@ -102,10 +103,6 @@ class FakeObject(TurtleObject):
     def update(self):
         super().update()
 
-
-
-
-
 # Initial game variables
 score = 0
 start_time = None
@@ -136,6 +133,7 @@ while running:
                 if normal_button.collidepoint(mouse_pos):
                     move_interval = 1.3
                     game_turtle = TurtleObject(move_interval)
+                    fake = None
                     start_time = time.time()
                     game_started = True
                 elif hard_button.collidepoint(mouse_pos):
@@ -160,8 +158,9 @@ while running:
     else:
         game_turtle.update()
         game_turtle.draw(screen)
-        fake.update()
-        fake.draw(screen)
+        if fake:
+            fake.update()
+            fake.draw(screen)
 
         timer_done, time_left = game_timer(start_time, duration)
         timer_text = timer_font.render(str(max(0, time_left)), True, (255, 255, 255))
@@ -171,7 +170,28 @@ while running:
         screen.blit(score_text, (screen_width - score_text.get_width() - 20, 20))
 
         if timer_done:
-            running = False
+            game_started = False  # Stop the game logic
+
+            # Create the result message
+            if score < 5:
+                msg = "Better luck next time!"
+            elif score < 15:
+                msg = "Nice try!"
+            else:
+                msg = "Turtle Master!"
+
+            result = messagebox.askquestion("Game Over", f"Your Score: {score}\n{msg}\n\nDo you want to play again?")
+
+            if result == 'yes':
+                # Reset for new game
+                score = 0
+                start_time = None
+                game_turtle = None
+                fake = None
+                game_started = False  # Let player choose difficulty again
+            else:
+                running = False
+
 
     pygame.display.flip()
 
