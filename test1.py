@@ -88,20 +88,32 @@ def game_timer(start_time, duration=20):
 class FakeObject(TurtleObject):
     def __init__(self, interval):
         super().__init__(interval)
-        self.move_interval = random.randint(0, 3)
         self.image = fake_image
-
-    def draw(self, screen):
-        super().draw(screen)
-
-    def move(self):
-        super().move()
-
-    def is_clicked(self, mouse):
-        return super().is_clicked(mouse)
+        self.visible = False
+        self.show_time = 1  # Stay visible for 1 second
+        self.next_appearance = time.time() + random.uniform(2, 5)  # First appearance random in 2-5 sec
 
     def update(self):
-        super().update()
+        current_time = time.time()
+        if self.visible:
+            if current_time - self.last_move_time > self.show_time:
+                self.visible = False
+                # Schedule next appearance randomly
+                self.next_appearance = current_time + random.uniform(2, 4)
+        else:
+            if current_time >= self.next_appearance:
+                self.move()
+                self.visible = True
+                self.last_move_time = current_time  # Start visibility timer
+
+    def draw(self, screen):
+        if self.visible:
+            super().draw(screen)
+
+    def is_clicked(self, mouse):
+        if self.visible:
+            return super().is_clicked(mouse)
+        return False
 
 # Initial game variables
 score = 0
