@@ -1,6 +1,6 @@
 from inspect import getframeinfo, stack
 import time
-from turtle import TurtleObject
+from final import TurtleObject
 import time
 
 def unittest(did_pass):

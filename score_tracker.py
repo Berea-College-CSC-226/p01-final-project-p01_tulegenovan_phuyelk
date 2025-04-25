@@ -1,4 +1,3 @@
-
 def load_scores(filename="score_log.txt"):
     try:
         with open(filename, "r") as file:

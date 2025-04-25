@@ -27,8 +27,8 @@ fake_image.set_colorkey((255, 255, 255), pygame.RLEACCEL)
 
 # Fonts
 timer_font = pygame.font.SysFont('Comic Sans MS', 60)
-score_font = pygame.font.SysFont('Comic Sans MS', 30)
-button_font = pygame.font.SysFont('Comic Sans MS', 36)
+score_font = pygame.font.SysFont('Comic Sans MS', 26)
+button_font = pygame.font.SysFont('Comic Sans MS', 40)
 
 class TurtleObject:
     def __init__(self, move_interval):
@@ -85,6 +85,25 @@ def game_timer(start_time, duration=20):
     elapsed = current_time - start_time
     return elapsed >= duration, int(duration - elapsed)
 
+def pre_game(duration=2):
+    popup_start = time.time()
+    while time.time() - popup_start < duration:
+        screen.blit(background, (0, 0))
+
+        # Message text
+        go_text = button_font.render("You have 20 seconds – GO!", True, (255, 255, 255))
+        screen.blit(go_text, ((screen_width - go_text.get_width()) // 2, 250))
+
+        # Loading bar
+        elapsed = time.time() - popup_start
+        bar_width = int((elapsed / duration) * 400)
+        pygame.draw.rect(screen, (255, 255, 255), (125, 350, 400, 30), 2)  # Border
+        pygame.draw.rect(screen, (0, 255, 0), (125, 350, bar_width, 30))   # Fill
+
+        pygame.display.flip()
+        pygame.time.delay(10)
+
+
 class FakeObject(TurtleObject):
     def __init__(self, interval):
         super().__init__(interval)
@@ -118,7 +137,7 @@ class FakeObject(TurtleObject):
 # Initial game variables
 score = 0
 start_time = None
-duration = 20
+duration = 21
 game_started = False
 move_interval = 1.0  # Default to normal
 
@@ -143,15 +162,17 @@ while running:
 
             if not game_started:
                 if normal_button.collidepoint(mouse_pos):
-                    move_interval = 1.3
+                    move_interval = 1
                     game_turtle = TurtleObject(move_interval)
                     fake = None
+                    pre_game()
                     start_time = time.time()
                     game_started = True
                 elif hard_button.collidepoint(mouse_pos):
                     move_interval = 0.7
                     game_turtle = TurtleObject(move_interval)
                     fake = FakeObject(move_interval)
+                    pre_game()
                     start_time = time.time()
                     game_started = True
             else:
@@ -163,8 +184,15 @@ while running:
                     fake.move()
 
     if not game_started:
-        title = button_font.render("Choose Difficulty to Start", True, (255, 255, 255))
-        screen.blit(title, ((screen_width - title.get_width()) // 2, 180))
+        title = button_font.render("Turtle Evasion!", True, (0, 255, 255))
+        screen.blit(title, ((screen_width - title.get_width()) // 2, 100))
+
+        instructions1 = score_font.render("Click on turtles to gain points!", True, (255, 255, 255))
+        screen.blit(instructions1, ((screen_width - instructions1.get_width()) // 2, 160))
+
+        instructions2 = score_font.render("Avoid fish(lol) – lose points if clicked!", True, (255, 255, 255))
+        screen.blit(instructions2, ((screen_width - instructions2.get_width()) // 2, 200))
+
         draw_button("Normal", *normal_button, (0, 255, 0))
         draw_button("Hard", *hard_button, (255, 0, 0))
     else:

@@ -83,8 +83,11 @@ Indicate what percentage of the project you have left to complete and how confid
   before the deadline.
 
 ```
-    very confident, we are almost done, and we have been progressing greatly. Something we can keep doing to ensure
-    we get this done is keep working on it together, and make progress everytime we do. 
+    Very confident, we are almost done, and we have been progressing greatly. Something we can keep doing to ensure
+    we get this done is keep working on it together, diving everything into small tasks, and make progress everytime we do. While we’ve encountered some 
+    challenges, especially with timer and visibility for the fake.png, we’ve been able to solve them through testing 
+    and iteration. This gives us confidence that we can handle any remaining issues.
+
 ```
 
 ---
