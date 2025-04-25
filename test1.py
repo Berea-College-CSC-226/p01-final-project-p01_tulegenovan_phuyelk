@@ -182,7 +182,12 @@ while running:
         screen.blit(score_text, (screen_width - score_text.get_width() - 20, 20))
 
         if timer_done:
-            game_started = False  # Stop the game logic
+            # ✅ NEW: Save the score to a text file
+            with open("score_log.txt", "a") as file:
+                file.write(f"{score}\n")
+
+            # Existing game over logic
+            game_started = False
 
             # Create the result message
             if score < 5:
