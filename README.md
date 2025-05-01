@@ -137,14 +137,7 @@ Each partner should write three to four well-written paragraphs address the foll
 ```
 
 ```
-    Partner 2: We picked this project because we thought it would be fun and we could apply lots of the 
-    turtle and graphics techniques we practiced in earlier assignments. I think the final project 
-    matches our original idea in most ways. We successfully made a working game with a timer and score
-    tracking. I learned a lot about working with images, classes, and event handling in Python. The hardest part for 
-    me was getting the timer and movement to work together without freezing or glitching. If I could change something,
-    I would want to start integrating features like the difficulty earlier so we had more time to debug them. I really liked 
-    working with my partner; we both stayed motivated and worked hard, and we managed to divide the work 
-    fairly while helping each other at the same time.
+    Partner 2: 
 ```
 
 ---
