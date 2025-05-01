@@ -105,12 +105,31 @@ Every program has bugs or features that had to be scrapped for time. These bugs 
 You should already have a few items in here from the prior weeks. Create a new issue for any undocumented errors and 
 deficiencies that remain in your code. Bugs found that aren't acknowledged in the queue will be penalized.
 
-### ❗Peer Evaluation
+### Peer Evaluation
 
 It is important that all members of your team contribute equitably. The peer evaluation is your chance to either 
 a) celebrate the great work you all did together as an effective team, or b) indicate to the instructor if a member of
 your team did not contribute their fair share. Grades will be adjusted for any team member who is evaluated poorly. Your
 commit history will be used as evidence, so make sure you are using git effectively!
+
+```
+We began the project by outlining the base together, discussing the main structure, how gameplay should work, and what 
+features we wanted to include. We were able to create an outline for our program. The first major piece that got built 
+was the timer, which was done by Kushal. After that, we were focusing on resollving issues in our code together. 
+
+Once resolved, Naz focused on designing and improving the UI. She worked on how everything looked on screen, cleaning up the 
+layout, choosing fonts, animations, and making the overall interface more user-friendly and fun.
+
+Once the UI was shaping up, Kushal added the difficulty level functionality, along with their screen buttons to choose 
+between Normal and Hard modes. He also worked on writing reflections in Milestones. Later, he also added a score 
+tracking system that stores scores across players and calculates both the average and highest score. 
+
+Around the same time, Naz worked on adding interactive elements like simple loading bar animation, so the user will be prepared.
+
+Overall, we both contributed fairly across the project. Our roles naturally split based on strengths: Kushal focused 
+more on functionality and data, and Naz focused more on visuals and player interaction. We communicated through Slack, 
+kept each other updated, and helped each other when needed. It was a smooth and balanced collaboration.
+```
 
 ### ❗Reflection
 
@@ -123,7 +142,27 @@ Each partner should write three to four well-written paragraphs address the foll
 - How well did you work with your partner? What made it go well? What made it challenging?
 
 ```
-    Partner 1: **Replace this text with your reflection
+    Partner 1: Naz Tulegenova
+    We picked this project because we wanted something fun to play, but also something that felt doable to code. 
+    A simple game like this seemed like a good balance. It gave us room to be creative, and it didn’t require anything 
+    too complicated to get started. We also liked the idea of building something that reacts to the player and feels 
+    kind of alive.
+
+    The final project actually turned out a bit better than I expected. At first, we had a basic idea in mind, but as 
+    we worked on it, we kept coming up with more small features to add like the fake image showing up randomly, the 
+    message box at the end, "pop" effect, the pre-game “GO!” screen. So it became more complete than we originally 
+    thought, which was nice.
+
+    One thing we learned from this was how important it is to build step by step. We didn’t try to do everything at 
+    once. Instead, we added one piece at a time and made sure it worked before moving on. That made everything feel 
+    more manageable. Also, communication, really, it matters. We had to keep each other in the loop, through 
+    Slack, so we didn’t get off track or miss something.
+
+    The hardest part was getting the core of the game working like making the turtle move, behave right, and show up 
+    when it should. That foundation took time. After that, adding other things felt more fun and creative. If we did it 
+    again, maybe we’d plan out the structure a little more at the beginning. We worked well as partners, there were no 
+    issues between us, but syncing our schedules was hard. We made it work by messaging on Slack when we couldn’t meet.
+
 ```
 
 ```
