@@ -91,25 +91,29 @@ Indicate what percentage of the project you have left to complete and how confid
 
 ## Milestone 4: Final Code, Presentation, Demo
 
-### ❗User Instructions
+### User Instructions
 
-In a paragraph, explain how to use your program. Assume the user is starting just after they hit the "Run" button 
-in PyCharm. 
+After you press the Run button in PyCharm, the game window will appear. 
+Click on the turtle as fast as you can every time it randomly shows up on 
+the screen. Every click on the turtle gives you 1 point, if you end up clicking
+on the fake turtle, which is the green fish, you will then lost a point. The game will 
+automatically end after 20 seconds. Once the game ends, your final score 
+will be displayed, and asked if you want to play again or not. if user presses no
+then the game window will close and stop running, if user presses yes then game and window
+will restart in order to start another round. 
 
-### ❗Errors and Constraints
+### Errors and Constraints
 
-Every program has bugs or features that had to be scrapped for time. These bugs should be tracked in the issue queue. 
-You should already have a few items in here from the prior weeks. Create a new issue for any undocumented errors and 
-deficiencies that remain in your code. Bugs found that aren't acknowledged in the queue will be penalized.
+I believe that our code runs well, and just the way we want it to. 
 
-### ❗Peer Evaluation
+### Peer Evaluation
 
-It is important that all members of your team contribute equitably. The peer evaluation is your chance to either 
-a) celebrate the great work you all did together as an effective team, or b) indicate to the instructor if a member of
-your team did not contribute their fair share. Grades will be adjusted for any team member who is evaluated poorly. Your
-commit history will be used as evidence, so make sure you are using git effectively!
+Both partners contributed equally to the project. We communicated effectively, divided 
+tasks fairly, and helped each other debug and test the program. Both of us committed 
+regularly to the GitHub repository and worked together in meetings to solve problems. 
+We feel both partners should receive full credit for the work.
 
-### ❗Reflection
+### Reflection
 
 Each partner should write three to four well-written paragraphs address the following (at a minimum):
 - Why did you select the project that you did?
@@ -120,11 +124,27 @@ Each partner should write three to four well-written paragraphs address the foll
 - How well did you work with your partner? What made it go well? What made it challenging?
 
 ```
-    Partner 1: **Replace this text with your reflection
+    Partner 1: We chose this project because we wanted to challenge ourselves by making a 
+    fun game that uses what we’ve learned in class, especially working with images, mouse events, 
+    and random movement. I really like how we turned an idea into an actual working game. I think 
+    our final project reflects our original design pretty well, except we didn’t get to fully 
+    finish adding difficulty levels. From this process, I learned a lot about how to break a big 
+    problem into smaller pieces, and how useful Git is for teamwork. The hardest part was fixing 
+    small bugs that didn’t always show up consistently, like the turtle sometimes disappearing or 
+    overlapping screen edges. If I could do it again, I would start testing more complex features 
+    earlier instead of waiting toward the end. I think I worked well with my partner because we 
+    kept communicating openly, shared tasks, and always tried to help each other when one of us got stuck.
 ```
 
 ```
-    Partner 2: **Replace this text with your reflection
+    Partner 2: We picked this project because we thought it would be fun and we could apply lots of the 
+    turtle and graphics techniques we practiced in earlier assignments. I think the final project 
+    matches our original idea in most ways. We successfully made a working game with a timer and score
+    tracking. I learned a lot about working with images, classes, and event handling in Python. The hardest part for 
+    me was getting the timer and movement to work together without freezing or glitching. If I could change something,
+    I would want to start integrating features like the difficulty earlier so we had more time to debug them. I really liked 
+    working with my partner; we both stayed motivated and worked hard, and we managed to divide the work 
+    fairly while helping each other at the same time.
 ```
 
 ---
